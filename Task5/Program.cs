@@ -7,7 +7,7 @@
 12 13 14 5
 11 16 15 6
 10  9  8 7
-*/
+*/ 
 
 Console.Write("Введите кол-во строк: ");
 int n = Convert.ToInt32(Console.ReadLine());
