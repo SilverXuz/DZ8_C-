@@ -9,14 +9,8 @@
 10  9  8 7
 */ 
 
-//Решение из видео разбора от Дениса
-Console.Write("Введите кол-во строк: ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите кол-во столбцов: ");
-int m = Convert.ToInt32(Console.ReadLine());
-int[,] matrix = new int[n, m];
-
-void Array(int[,] matrix)
+//Решение из видео разбора от Дениса. Работает только для квадратной матрицы.
+void NewMatrix(int[,] matrix)
 {
     int temp = 1, i = 0, j = 0;
     while (temp <= matrix.GetLength(0) * matrix.GetLength(1))
@@ -30,7 +24,7 @@ void Array(int[,] matrix)
         else if (i >= j && i + j > matrix.GetLength(1) - 1)
             j--;
         else
-            i++;
+            i--;
     }
     for (i = 0; i < matrix.GetLength(0); i++)
     {
@@ -40,8 +34,12 @@ void Array(int[,] matrix)
     }
 }
 
-
-Array(matrix);
+Console.Write("Введите кол-во строк: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите кол-во столбцов: ");
+int m = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = new int[n, m];
+NewMatrix(matrix);
 
 // Решение от преподавателя
 // int arraySizeX = 7;
